@@ -1,0 +1,27 @@
+from selenium import webdriver
+
+webpage = r"URL" # target_url
+searchterm = "Ipsum Loram.txt" # text to fill
+
+driver = webdriver.Firefox()
+driver.get(webpage)
+
+outter_insert_point3 = driver.find_element_by_class_name("Block-class")
+outter_insert_point3.click()
+
+outter_insert_point2 = driver.find_element_by_class_name("")
+outter_insert_point2.click()
+
+outter_insert_point1 = driver.find_element_by_class_name("")
+outter_insert_point1.click()
+
+inner_insert_point = driver.find_element_by_class_name("")
+inner_insert_point.click()
+
+menu_layout = driver.find_element_by_class_name("")
+
+sbox = driver.find_element_by_class_name("sqs-html-content")
+sbox.send_keys(searchterm)
+
+submit = driver.find_element_by_class_name("save")
+submit.click()
